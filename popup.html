@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redbook Collect</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    label {
+      font-size: 14px;
+      color: #666;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #FF2442;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #e61e3c;
+    }
+    .status {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-group">
+      <label for="tableUrl">飞书多维表格 URL</label>
+      <input type="text" id="tableUrl" placeholder="直接粘贴飞书多维表格 URL 即可">
+    </div>
+    <div class="input-group">
+      <label for="appId">App ID</label>
+      <input type="text" id="appId" placeholder="填写飞书应用的 app_id">
+    </div>
+    <div class="input-group">
+      <label for="appSecret">App Secret</label>
+      <input type="password" id="appSecret" placeholder="填写飞书应用的 app_secret">
+    </div>
+    <button id="saveConfig">保存配置</button>
+    <button id="collectData">提取内容</button>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
